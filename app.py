@@ -19,4 +19,4 @@ app.register_blueprint(auth_bp)
 
 if __name__ == '__main__':
     #run with socketIO for real-time features.
-    socketio.run(app, port=6060, debug=False)
+    socketio.run(app, port=3002, debug=False)
