@@ -22,6 +22,7 @@ select option {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     border: 1px solid var(--cor-borda);
+    border-radius: 4px;
     padding: 4px 8px;
     font-size: 14px;
 }
@@ -51,6 +52,7 @@ select option {
 .modal-content {
     background: #222;
     border: 1px solid #333;
+    border-radius: 8px;
     width: 90%;
     max-width: 500px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -69,6 +71,7 @@ select option {
     justify-content: space-between;
     align-items: center;
     background: #2a2a2a;
+    border-radius: 8px 8px 0 0;
 }
 
 .modal-header h3 { margin: 0; font-size: 1.1rem; color: #eee; }
@@ -126,6 +129,7 @@ select option {
     width: 80px;
     height: 80px;
     background: var(--cor-secundaria);
+    border-radius: 50%;
     margin: 0 auto 1rem;
     display: flex;
     align-items: center;
@@ -145,6 +149,7 @@ select option {
 .role-tag {
     display: inline-block;
     padding: 0.2rem 0.8rem;
+    border-radius: 20px;
     font-size: 0.8rem;
     margin-top: 0.5rem;
     font-weight: bold;
@@ -170,6 +175,8 @@ select option {
     padding: 0.8rem 1rem;
     color: #aaa;
     text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     font-size: 1.1rem;
 }
 
@@ -208,23 +215,26 @@ select option {
 }
 
 .stat-card {
-    background: #eef2ff;
+    background: var(--dash-card-bg);
     border: var(--dash-card-border);
     padding: 1.5rem;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .stat-card:hover {
-    
-    background: #ced2dd;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .stat-icon {
     width: 60px;
     height: 60px;
     background: rgba(210, 115, 138, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,8 +263,9 @@ select option {
 }
 
 .panel {
-    background: #d6daf0;
+    background: var(--dash-card-bg);
     border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -316,6 +327,7 @@ select option {
 .board-card {
     background: #222;
     border: 1px solid #333;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -410,6 +422,7 @@ select option {
 
 .btn {
     padding: 0.5rem 1rem;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
     font-size: 0.9rem;
@@ -417,6 +430,7 @@ select option {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    transition: opacity 0.2s;
     color: white;
 }
 
@@ -437,9 +451,11 @@ select option {
     align-items: center;
     justify-content: center;
     border: 1px solid #444;
-    background: #d6daf0;
-    color: #000000;
+    background: #333;
+    color: #ccc;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background 0.2s;
     font-size: 0.9rem;
     text-decoration: none;
 }
@@ -459,6 +475,7 @@ select option {
     background: rgba(0,0,0,0.3);
     border: 1px solid rgba(255,255,255,0.1);
     color: white;
+    border-radius: 4px;
 }
 
 .search-input:focus {
@@ -469,9 +486,10 @@ select option {
 .config-select {
     width: 100%;
     padding: 0.6rem;
+    border-radius: 6px;
     border: 1px solid rgba(255,255,255,0.1);
     background: rgba(0,0,0,0.2);
-    color: #000000;
+    color: #ccc;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -507,6 +525,7 @@ textarea.form-input, input.form-input, select.form-input {
     border: 1px solid #444;
     color: #fff;
     padding: 8px 12px;
+    border-radius: 4px;
 }
 
 textarea.form-input:focus, input.form-input:focus, select.form-input:focus {
@@ -521,6 +540,7 @@ textarea.form-input:focus, input.form-input:focus, select.form-input:focus {
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid #333;
+    border-radius: 4px;
     background: #1a1a1a;
 }
 
@@ -547,10 +567,12 @@ textarea.form-input:focus, input.form-input:focus, select.form-input:focus {
 .report-card {
     background: rgba(0,0,0,0.2);
     border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    transition: transform 0.2s;
 }
 
 .text-muted {
@@ -575,7 +597,8 @@ hr {
         top: 0;
         height: 100vh;
         z-index: 1000;
-              box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+        transition: left 0.3s ease;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
     }
 
     .sidebar-checkbox:checked ~ .dashboard-wrapper .dash-sidebar {
@@ -591,6 +614,7 @@ hr {
         color: white;
         width: 50px;
         height: 50px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
